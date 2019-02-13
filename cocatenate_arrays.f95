@@ -26,11 +26,11 @@
   !concateno las matrices V y Vn 
   do row=1,6
         do col=1,2
-                if (row < 4) then !esta condicion me permite saber & si debo
+                if (row < 4) then !esta condicion me permite saber si debo
 !cargar el valor de V o Vn
                    Vf(row,col)=V(row,col)
                 else
-                   vfrow=row-3 !si estoy en la fila 4 de Vf debo cargar & la
+                   vfrow=row-3 !si estoy en la fila 4 de Vf debo cargar la
 !fila 1 de Vn
                    Vf(row,col)=Vn(vfrow,col)
                 end if
