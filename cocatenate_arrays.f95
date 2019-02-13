@@ -24,10 +24,11 @@
         print *,(Vn(row,col),col=1,2)
   end do
   print *,"Matrix Vf:"
+  
   !concateno las matrices V y Vn 
   do row=1,6
         do col=1,2
-                if (row < 4) then 
+                if (row < 4) then !esta condicion me permite saber si debo cargar el valor de V o Vn
                    Vf(row,col)=V(row,col)
                 else
                    vfrow=row-3
