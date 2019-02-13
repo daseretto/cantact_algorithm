@@ -6,14 +6,12 @@
    !inicializo las dos matrices la matriz V contendra enteros del 1 al 6
    !la matix Vn sera el doble de cada elemento de V
    do row=1,3
-
         do col =1,2
                 counter=counter+1
                 V(row,col)=counter
                 Vn(row,col)=counter*2
         end do
   end do
-
 
   print *,"Matrix V:"
   do row=1,3
@@ -31,7 +29,7 @@
                 if (row < 4) then !esta condicion me permite saber si debo cargar el valor de V o Vn
                    Vf(row,col)=V(row,col)
                 else
-                   vfrow=row-3
+                   vfrow=row-3 !si estoy en la fila 4 de Vf debo cargar la fila 1 de Vn
                    Vf(row,col)=Vn(vfrow,col)
                 end if
         end do
@@ -40,6 +38,5 @@
         print *,(Vf(row,col),col=1,2)
   end do
 
-
- end program concat_arrays
+end program concat_arrays
 
